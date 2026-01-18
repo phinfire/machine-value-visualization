@@ -1,0 +1,22 @@
+<h1>Machine Values</h1>
+@if (knownMachines.length == 0) {
+    <mat-spinner></mat-spinner>
+    <p>Waiting for websocket to become available...</p>
+} @else {
+    @if (dataIsOutdated) {
+        <span class="error-text"><mat-icon>error</mat-icon> No data received for more than 60 seconds!<mat-icon>error</mat-icon></span>
+        @if (!connectionIsActive) {
+            <mat-spinner></mat-spinner>
+            <p>WebSocket connection is not active. Attempting to reconnect...</p>
+        }
+    } @else {
+        <h3><span class="text-light">Total</span> and <span class="text-darker">Average</span> Values Reported during the Last 60 Seconds per Machine and Scrap Index</h3>
+        <span>Use the checkboxes to hide machines</span>
+        <div class="checkbar">
+            @for (machine of knownMachines; track machine.id) {
+            <mat-checkbox [(ngModel)]="machine.isVisible" (change)="onMachineVisibilityChange()">{{machine.id}}</mat-checkbox>
+            }
+        </div>
+    }
+}
+<div #chart class="vis-container"></div>

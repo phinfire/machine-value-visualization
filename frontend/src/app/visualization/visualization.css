@@ -1,0 +1,42 @@
+:host {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    --light-color: rgb(0, 144, 0);
+    --darker-color: rgb(0, 100, 0);
+}
+
+.checkbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+.vis-container {
+    width: 100%;
+    height: 100%;
+}
+
+.text-light {
+    color: var(--light-color);
+    text-decoration: underline;
+}
+
+.text-darker {
+    color: var(--darker-color);
+    text-decoration: underline;
+}
+
+.error-text {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

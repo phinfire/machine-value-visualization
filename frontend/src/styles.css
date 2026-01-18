@@ -1,0 +1,17 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+:root {
+    --background-color: rgb(255, 255, 240);
+}
+
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+}

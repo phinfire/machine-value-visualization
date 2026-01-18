@@ -1,0 +1,21 @@
+{
+  "name": "machine-value-visualization",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "npm run build && node dist/server.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mqtt": "^5.14.1",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "@types/ws": "^8.18.1",
+    "ts-node": "^1.7.1",
+    "typescript": "^5.9.3"
+  }
+}
